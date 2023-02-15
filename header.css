@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Serif Tomil' , serif;
+    box-sizing: border-box;
+}
+header {
+    position: relative;
+    background: url(/images/ava3.jpg) no-repeat;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+header::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.4);
+}
+nav{
+    position: fixed;
+    width: 100%;
+    padding: 20px 0;
+    z-index: 1;
+}
+nav .logo a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+}
+nav .menu {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.menu ul{
+    display: flex;
+}
+.menu ul li{
+    list-style: none;
+    margin-left: 7px;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+.menu ul li.active a{
+    background: white;
+    color: black;
+    border-radius: 5px;
+}
+.menu ul li a:hover {
+    background: white;
+    color: black;
+    border-radius: 5px;
+}
+.center {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    padding: 0 20px;
+    text-align: center;
+}
+.center .title {
+    color: black;
+    font-size: 55px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.center button {
+    margin-top: 20px;
+    background: none;
+    border: none;
+}
+.center .btn {
+    display: inline-block;
+    border: 1px solid white;
+    padding: 10px 30px;
+    margin: 0 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.center .btn:hover {
+    background: black;
+    color: white;
+}
+.center .btn:nth-child(1) {
+    border: none;
+    background: black;
+    color: white;
+}
+@media screen and (max-width: 750px) {
+    nav .logo{
+        display: none;
+    }
+    .menu ul {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
